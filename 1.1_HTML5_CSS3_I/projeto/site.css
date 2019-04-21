@@ -17,6 +17,7 @@ body {
     padding: 20px;
     border-bottom: 10px solid black;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
+    text-transform: uppercase;
 }
 
 
@@ -72,6 +73,35 @@ aside ul {
 
 .icones-sociais li {
     display: inline-block;
+}
+
+.icones-sociais a {
+    /* since the default display for links is inline, images as links cannot have their dimensions (width, height)
+     * changed. Then, we need to use the option inline-block.
+     * Note that theses links are inside <li> that already are inline-block. Therefore, we have the same effect
+     * if we use block here, because the elements will be already inline.
+      */
+    display: inline-block;
+    /* icon sizes */
+    width: 40px;
+    height: 40px;
+    /* high **negative** values place the text to the left of the page hiding them.
+     * On the other hand, high positive values place the text to the right of the page.
+     * The text doesn't disappear because a horizontal scrollbar appears now.
+    */
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(github.png);
+}
+
+.twitter {
+    background-image: url(twitter.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
 }
 
 footer {
