@@ -1,22 +1,48 @@
 
+/* space means inside. Then, this style is for h1 inside the tag(s) main */
+
 body {
+    font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
-}
-
-h1 {
-    background-color: #851944;
-    color: #FFF;
-    text-align: center;
-}
-
-h2 {
-    font-size: 16px;
+    font-size: 120%; /* increases the size of the basis font from the browser */
 }
 
 h1, h2 {
-    font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+main h1 {
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
 }
 
 p {
-    font-family: "Crimson Text", "Times New Roman", serif;
+    text-align: justify;
+}
+
+blockquote {
+    background-color: #D9E5E3;
+}
+
+aside {
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+}
+
+footer {
+    background-color: #000;
+    color: #F2FFFC;
+}
+
+nav a {
+    color: #F2FFFC;
+}
+
+ul {
+    color: pink;
+}
+
+ul li a {
+    color: inherit;
 }
