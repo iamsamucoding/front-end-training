@@ -72,6 +72,10 @@ aside ul {
     list-style-type: none; /* remove the list bullets */
 }
 
+aside li {
+    display: inline-block;
+}
+
 footer {
     background-color: #000;
     color: #F2FFFC;
