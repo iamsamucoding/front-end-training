@@ -8,17 +8,20 @@ body {
     line-height: 1.5;
 }
 
-h1, h2 {
-    font-family: "Open Sans Condensed", "Arial", sans-serif;
+main div {
+    padding: 30px 0;
 }
 
 main h1 {
+    font-size: 60px;
     text-align: center;
     background-color: #851944;
     color: #FFF;
     padding: 20px;
     border-bottom: 10px solid black;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
+
 
 main div {
     width: 720px;
@@ -26,8 +29,22 @@ main div {
     margin-right: auto;
 }
 
+h2 {
+    font-size: 40px;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 p {
     text-align: justify;
+    margin: 20px 0;
 }
 
 blockquote {
@@ -35,7 +52,7 @@ blockquote {
     padding: 16px;
     border: 10px solid #C2CCCA;
     width: 250px;
-    margin: 10px;
+    margin: 20px 40px;
     box-sizing: border-box;
 }
 
@@ -44,6 +61,11 @@ aside {
     background-color: #3C1D3D;
     color: #F2FFFC;
     text-align: center;
+}
+
+aside h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 aside ul {
