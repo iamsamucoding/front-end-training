@@ -5,6 +5,7 @@ body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
     font-size: 120%; /* increases the size of the basis font from the browser */
+    line-height: 1.5;
 }
 
 h1, h2 {
@@ -15,6 +16,14 @@ main h1 {
     text-align: center;
     background-color: #851944;
     color: #FFF;
+    padding: 20px;
+    border-bottom: 10px solid black;
+}
+
+main div {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
@@ -23,16 +32,31 @@ p {
 
 blockquote {
     background-color: #D9E5E3;
+    padding: 16px;
+    border: 10px solid #C2CCCA;
+    width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
 }
+
 
 aside {
     background-color: #3C1D3D;
     color: #F2FFFC;
+    text-align: center;
+}
+
+aside ul {
+    list-style-type: none; /* remove the list bullets */
 }
 
 footer {
     background-color: #000;
     color: #F2FFFC;
+}
+
+blockquote, aside, footer {
+    padding: 20px;
 }
 
 nav a {
@@ -46,3 +70,4 @@ ul {
 ul li a {
     color: inherit;
 }
+
