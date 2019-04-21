@@ -8,6 +8,14 @@ body {
     line-height: 1.5;
 }
 
+main {
+    /* The main content will have 85% of the screen's width and will be a float element to the left.
+     * The other 15% of width will be for the navigation menu: class .navegacao-site
+     */
+    width: 85%;
+    float: left;
+}
+
 
 .titulo-principal {
     font-size: 60px;
@@ -30,6 +38,7 @@ body {
 .subtitulo-texto {
     font-size: 40px;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
+    clear: both;
 }
 
 strong {
@@ -53,12 +62,44 @@ p {
     margin: 20px 40px;
 }
 
+.citacao-bio-fiat {
+    float: right;
+}
+
+.citacao-bio-petrobras {
+    float: left;
+}
+
+cite {
+    font-style: italic;
+    float: right;
+}
+
+.minha-foto, .navegacao-site  {
+    /* The navigation element and all images in the page will have 15% of the screen's width.
+     * They will be float elements to the right.
+     */
+    width: 15%;
+    float: right;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
+     * resulting in a larger element (> 15%) in the screen, only its content. This 'breaks' the 100% screen.
+    * We use this option to take them into account. */
+    box-sizing: border-box;
+}
+
 
 .navegacao-site {
     background-color: #3C1D3D;
     color: #F2FFFC;
     padding: 20px;
     text-align: center;
+    
+    /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
+     * resulting in a larger element (> 15%) in the screen, only its content. This 'breaks' the 100% screen.
+    * We use this option to take them into account. */
+    box-sizing: border-box;
 }
 
 
@@ -125,3 +166,6 @@ ul li a {
     color: inherit;
 }
 
+.clearfix {
+    clear: both;
+}
