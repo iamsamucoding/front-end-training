@@ -33,6 +33,7 @@ main {
     width: 720px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 100px; /* added to avoid that the footer (which has position: fixed) be over the main content */
 }
 
 .subtitulo-texto {
@@ -75,11 +76,7 @@ cite {
     float: right;
 }
 
-.minha-foto, .navegacao-site  {
-    /* The navigation element and all images in the page will have 15% of the screen's width.
-     * They will be float elements to the right.
-     */
-    width: 15%;
+.minha-foto, .navegacao-site {
     float: right;
     border-left: 10px solid black;
     border-bottom: 10px solid black;
@@ -89,18 +86,46 @@ cite {
     box-sizing: border-box;
 }
 
+.minha-foto {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 
 .navegacao-site {
+    /* The navigation element and all images in the page will have 15% of the screen's width.
+     * They will be float elements to the right.
+     */
+    width: 15%;
     background-color: #3C1D3D;
     color: #F2FFFC;
     padding: 20px;
     text-align: center;
-    
+
     /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
      * resulting in a larger element (> 15%) in the screen, only its content. This 'breaks' the 100% screen.
     * We use this option to take them into account. */
     box-sizing: border-box;
+
+    /* Without these properties, the profile image would be superimposed/over on the navigation menu.
+     * We then move the nav 310px (which is the box model size of the profile image) from the top of its
+     * relative position in the HTML flow.
+    */
+    position: relative;
+    top: 310px;
 }
+
+/**
+ * We could position the navigation menu without using the 'float' property.
+ * For that, we removed such property from '.minha-foto, .navegacao-site' and then would change the following
+ * properties on '.navegacao-site':
+
+    position: absolute;
+    top: 310px;
+    right: 0;
+ */
+
 
 
 .navegacao-site h1 {
@@ -148,6 +173,9 @@ aside ul {
 footer {
     background-color: #000;
     color: #F2FFFC;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* guarantees a footer in 100% of the page's width */
 }
 
 blockquote, aside, footer {
