@@ -1,11 +1,16 @@
 
-/* space means inside. Then, this style is for h1 inside the tag(s) main */
+
+html {
+    font-size: 100%; /* the default font-size for the page based on the browser's font-size */
+}
+
+
 
 body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
-    font-size: 120%; /* increases the size of the basis font from the browser */
     line-height: 1.5;
+    font-size: 120%;
 }
 
 main {
@@ -18,12 +23,12 @@ main {
 
 
 .titulo-principal {
-    font-size: 60px;
+    font-size: 3rem;
     text-align: center;
     background-color: #851944;
     color: #FFF;
-    padding: 20px;
-    border-bottom: 10px solid black;
+    padding: 2rem;
+    border-bottom: .5rem solid black;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     text-transform: uppercase;
 }
@@ -37,7 +42,7 @@ main {
 }
 
 .subtitulo-texto {
-    font-size: 40px;
+    font-size: 1.5em;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     clear: both;
 }
@@ -50,17 +55,17 @@ em {
     font-style: italic;
 }
 
-p {
+main p {
     text-align: justify;
-    margin: 20px 0;
+    margin: 1em 0;
 }
 
 .citacao-bio {
     background-color: #D9E5E3;
-    border: 10px solid #C2CCCA;
-    width: 250px;
+    border: .5rem solid #C2CCCA; /* different ways/measures for sizing */
+    width: 30ch;
+    margin: 1em 2em;
     box-sizing: border-box;
-    margin: 20px 40px;
 }
 
 .citacao-bio-fiat {
@@ -100,7 +105,7 @@ cite {
     width: 15%;
     background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
 
     /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
@@ -129,8 +134,8 @@ cite {
 
 
 .navegacao-site h1 {
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 aside ul {
@@ -170,12 +175,15 @@ aside ul {
     background-image: url(../img/linkedin.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
 }
 
-footer {
+.rodape-pagina {
     background-color: #000;
     color: #F2FFFC;
+    padding: 1em;
+    clear: both;
     position: fixed;
     bottom: 0;
     width: 100%; /* guarantees a footer in 100% of the page's width */
+    box-sizing: border-box;
 }
 
 blockquote, aside, footer {

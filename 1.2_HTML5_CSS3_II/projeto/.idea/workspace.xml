@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a183dbb9-6d6c-4313-9c1e-caf214dae2be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.1_HTML5_CSS3_I/projeto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.1_HTML5_CSS3_I/projeto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.1_HTML5_CSS3_I/projeto/portfolio.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bio.html" beforeDir="false" afterPath="$PROJECT_DIR$/bio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/github.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/site.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedin.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/linkedin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/twitter.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,41 +22,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="49" lean-forward="true" selection-end-line="73" />
-              <folding>
-                <element signature="e#3084#3090#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/site.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfolio.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-              <folding>
-                <element signature="e#4316#4322#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/portfolio.css">
+        <entry file="file://$PROJECT_DIR$/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+            <state relative-caret-position="255">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -82,12 +51,16 @@
     <findStrings>
       <find>M</find>
       <find>IBM</find>
-      <find>h1</find>
       <find>subtitulo-texto</find>
       <find>subt</find>
       <find>position</find>
       <find>minha</find>
       <find>leia</find>
+      <find>citacao</find>
+      <find>h1</find>
+      <find>rodape-pagina</find>
+      <find>SOBRE</find>
+      <find>titulo-principal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,10 +72,12 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/bio.html" />
         <option value="$PROJECT_DIR$/site.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/site.css" />
         <option value="$PROJECT_DIR$/portfolio.html" />
         <option value="$PROJECT_DIR$/css/portfolio.css" />
+        <option value="$PROJECT_DIR$/css/outro-index.css" />
+        <option value="$PROJECT_DIR$/outro-index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/site.css" />
       </list>
     </option>
   </component>
@@ -186,11 +161,12 @@
       <updated>1555781890893</updated>
       <workItem from="1555781892100" duration="960000" />
       <workItem from="1555786446470" duration="10768000" />
+      <workItem from="1556046159802" duration="1366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18488000" />
+    <option name="totallyTimeSpent" value="19854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -246,20 +222,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/site.css">
+    <entry file="file://$PROJECT_DIR$/css/portfolio.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="49" lean-forward="true" selection-end-line="73" />
-          <folding>
-            <element signature="e#3084#3090#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -273,10 +239,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/portfolio.css">
+    <entry file="file://$PROJECT_DIR$/css/outro-index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="2166">
+          <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outro-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
