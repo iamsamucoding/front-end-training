@@ -1,0 +1,31 @@
+
+.portfolio li {
+    display: inline-block;
+    /**
+     * To appear two image box per line, we need to make sure each one is just under
+     * half the full width of the container.
+     * We can use the percentage measure for this.
+     */
+    width: 45%;
+
+    border: 8px solid black;
+    background-color: #FAFFFC;
+    box-sizing: border-box; /* ensures that our entire boxes (including padding and border) have width of 45%. */
+    padding: 16px;
+
+    /**
+     * Note that we only defined the bottom and right margins .
+     * Because, if we define a top and/or left margin, we will have a space of 32 pixels between them,
+     * besides misaligning them with respect to the above paragraph.
+     */
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.portfolio img {
+    /**
+     * This ensures that the images inside the boxes will have 100% of the maximum size inside the boxes.
+     * Because the original size of the images can be larger than the box size where it is inserted.
+     */
+    width: 100%;
+}

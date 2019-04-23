@@ -159,15 +159,15 @@ aside ul {
 }
 
 .github {
-    background-image: url(github.png);
+    background-image: url(../img/github.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
 }
 
 .twitter {
-    background-image: url(twitter.png);
+    background-image: url(../img/twitter.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
 }
 
 .linkedin {
-    background-image: url(linkedin.png);
+    background-image: url(../img/linkedin.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
 }
 
 footer {

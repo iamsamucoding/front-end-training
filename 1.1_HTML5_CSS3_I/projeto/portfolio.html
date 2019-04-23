@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- indica ao navegador que a página é HTML5 -->
+<html>
+<head> <!-- tag para agrupar as meta-informações do site: aquilo que não é mostrado ao usuário -->
+    <title>Biografia - João da Silva</title>
+
+    <meta charset="UTF-8"> <!-- codificação de texto da página -->
+    <link rel="icon" href="img/favicon.png"> <!-- adiciona favicon à pagina -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+
+<body> <!-- tag onde fica tudo o que deve ser mostrado ao usuário -->
+<main>
+    <h1 class="titulo-principal">Sobre mim</h1>
+
+    <div class="container">
+        <p>Veja abaixo a lista de meus projetos mais relevantes</p>
+
+        <ul class="portfolio">
+            <li>
+                <a href="http://bmw.com">
+                    <figure>
+                        <img src="img/bmw.png" alt="Site da BMW">
+                        <figcaption>BMW.com: reformulação de design e implementação de HTML, CSS e JavaScript</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="http://uol.com.br">
+                    <figure>
+                        <img src="img/uol.png" alt="Front-page da UOL">
+                        <figcaption>UOL.com.br: reformulação de design e implementação de HTML, CSS e JavaScript</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ibm.com.br">
+                    <figure>
+                        <img src="img/ibm.png" alt="Site da IBM">
+                        <figcaption>IBM.com: aplicação de progressive enhancement em conjunto com aplicação back-end</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="http://g1.com.br">
+                    <figure>
+                        <img src="img/g1.png" alt="Front-page do portal G1">
+                        <figcaption>G1.com.br: reformulação de design e implementação de HTML, CSS e JavaScript</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<img src="img/eu.jpg" alt="Foto do João da Silva" class="minha-foto">
+<aside class="navegacao-site">
+    <div>
+        <h1>João da Silva</h1>
+
+        <nav> <!-- specific tag that specifies a set of links so that the user can navigate the site. It is like a <div> but with a specific semantic -->
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="bio.html">Sobre mim</a></li>
+            </ul>
+        </nav>
+        <ul class="icones-sociais">
+            <li><a href="https://github.com/joaodasilva" class="github">Github</a></li>
+            <li><a href="https://twitter.com/joaodasilva" class="twitter">Twitter</a></li>
+            <li><a href="https://br.linkedin.com/pub/joão-da-silva/32/4/508" class="linkedin">LinkedIn</a></li>
+        </ul>
+    </div>
+</aside>
+
+<footer class="clearfix">
+    &copy; João da Silva
+</footer>
+</body>
+</html>
