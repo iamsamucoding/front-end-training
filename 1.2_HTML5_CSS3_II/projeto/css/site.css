@@ -1,0 +1,199 @@
+
+/* space means inside. Then, this style is for h1 inside the tag(s) main */
+
+body {
+    font-family: "Crimson Text", "Times New Roman", serif;
+    background-color: #F2FFFC;
+    font-size: 120%; /* increases the size of the basis font from the browser */
+    line-height: 1.5;
+}
+
+main {
+    /* The main content will have 85% of the screen's width and will be a float element to the left.
+     * The other 15% of width will be for the navigation menu: class .navegacao-site
+     */
+    width: 85%;
+    float: left;
+}
+
+
+.titulo-principal {
+    font-size: 60px;
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
+    padding: 20px;
+    border-bottom: 10px solid black;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+
+.container {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px; /* added to avoid that the footer (which has position: fixed) be over the main content */
+}
+
+.subtitulo-texto {
+    font-size: 40px;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    clear: both;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: 10px solid #C2CCCA;
+    width: 250px;
+    box-sizing: border-box;
+    margin: 20px 40px;
+}
+
+.citacao-bio-fiat {
+    float: right;
+}
+
+.citacao-bio-petrobras {
+    float: left;
+}
+
+cite {
+    font-style: italic;
+    float: right;
+}
+
+.minha-foto, .navegacao-site {
+    float: right;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
+     * resulting in a larger element (> 15%) in the screen, only its content. This 'breaks' the 100% screen.
+    * We use this option to take them into account. */
+    box-sizing: border-box;
+}
+
+.minha-foto {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+.navegacao-site {
+    /* The navigation element and all images in the page will have 15% of the screen's width.
+     * They will be float elements to the right.
+     */
+    width: 15%;
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 20px;
+    text-align: center;
+
+    /* By default, the padding and border of the navigation element won't take into account in the width computation (15%),
+     * resulting in a larger element (> 15%) in the screen, only its content. This 'breaks' the 100% screen.
+    * We use this option to take them into account. */
+    box-sizing: border-box;
+
+    /* Without these properties, the profile image would be superimposed/over on the navigation menu.
+     * We then move the nav 310px (which is the box model size of the profile image) from the top of its
+     * relative position in the HTML flow.
+    */
+    position: relative;
+    top: 310px;
+}
+
+/**
+ * We could position the navigation menu without using the 'float' property.
+ * For that, we removed such property from '.minha-foto, .navegacao-site' and then would change the following
+ * properties on '.navegacao-site':
+
+    position: absolute;
+    top: 310px;
+    right: 0;
+ */
+
+
+
+.navegacao-site h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+aside ul {
+    list-style-type: none; /* remove the list bullets */
+}
+
+.icones-sociais li {
+    display: inline-block;
+}
+
+.icones-sociais a {
+    /* since the default display for links is inline, images as links cannot have their dimensions (width, height)
+     * changed. Then, we need to use the option inline-block.
+     * Note that theses links are inside <li> that already are inline-block. Therefore, we have the same effect
+     * if we use block here, because the elements will be already inline.
+      */
+    display: inline-block;
+    /* icon sizes */
+    width: 40px;
+    height: 40px;
+    /* high **negative** values place the text to the left of the page hiding them.
+     * On the other hand, high positive values place the text to the right of the page.
+     * The text doesn't disappear because a horizontal scrollbar appears now.
+    */
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(../img/github.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
+}
+
+.twitter {
+    background-image: url(../img/twitter.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png); /* the image path is relative to the CSS file, not the project root or HTML url. */
+}
+
+footer {
+    background-color: #000;
+    color: #F2FFFC;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* guarantees a footer in 100% of the page's width */
+}
+
+blockquote, aside, footer {
+    padding: 20px;
+}
+
+nav a {
+    color: #F2FFFC;
+}
+
+ul {
+    color: pink;
+}
+
+ul li a {
+    color: inherit;
+}
+
+.clearfix {
+    clear: both;
+}
