@@ -1,0 +1,78 @@
+/* Podemos usar um seletor de atributo para selecionar
+   apenas a legenda desse campo e não dos outros */
+legend,
+label[for="mensagem"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* As tags <label> que têm o atributo "for" são
+   os rótulos dos campos sem ser os assuntos */
+label[for],
+button {
+    display: block;
+}
+
+/* Selecionamos apenas os campos de texto */
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+button {
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-top: 1em;
+}
+
+/* specific style for invalid fields */
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+
+/* specific style for fields on focus */
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+
+/* specific style for button on focus */
+button:focus {
+    background-color: #8C1D3D;
+}
+
+/* alguns ajustes para o campo "Outro": deixar ele na mesma linha dos outros assuntos */
+fieldset > fieldset {
+    display: inline;
+}
+
+/* deixar o rótulo dele inline de novo */
+label[for="outro"] {
+    display: inline;
+}
+
+/* deixar só esse campo sem ocupar a tela toda */
+input[name="outro-assunto"] {
+    width: auto;
+}
+
+
+/* Hide the input text of the Other Options of a Radio Button */
+input[value="Outro"] ~ input {
+    display: none;
+}
+
+/* When the radio button "Outro" was checked, it shows the text field */
+input[value="Outro"]:checked ~ input {
+    display: inline;
+}

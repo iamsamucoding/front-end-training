@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="394d49eb-3625-4c70-bd86-c964c351be5f" name="Default Changelist" comment="">
+    <list default="true" id="d89f0ed7-b08b-47a6-8b35-8b0517fd41ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../avancando-html-css-270d35cd07fc8b4bf31b54e0e4287966de449ea9.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projeto-class6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../projeto-class6/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,12 +16,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/blog.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/bio.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bio.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>block</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -28,7 +43,7 @@
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/projeto-class6.iml" />
+        <option value="$PROJECT_DIR$/.idea/projeto-class9.iml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
@@ -52,12 +67,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="projeto-class6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-class6" type="462c0819:PsiDirectoryNode" />
+              <item name="projeto-class9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-class9" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="projeto-class6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-class6" type="462c0819:PsiDirectoryNode" />
+              <item name="projeto-class9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-class9" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -67,7 +82,6 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -90,17 +104,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="394d49eb-3625-4c70-bd86-c964c351be5f" name="Default Changelist" comment="" />
-      <created>1556133990304</created>
+      <changelist id="d89f0ed7-b08b-47a6-8b35-8b0517fd41ba" name="Default Changelist" comment="" />
+      <created>1556139913583</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1556133990304</updated>
-      <workItem from="1556133991555" duration="837000" />
+      <updated>1556139913583</updated>
+      <workItem from="1556139914660" duration="1199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="837000" />
+    <option name="totallyTimeSpent" value="1199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -130,6 +144,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/blog.css">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bio.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
