@@ -10,3 +10,27 @@
 .cabecalhoPrincipal-nav {
     display: flex;
 }
+
+
+
+
+/*************** FOOTER ***************/
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* espaço ao entorno dos elementos */
+    width: 70%;
+    margin-right: 5%;
+}
+
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
