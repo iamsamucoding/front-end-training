@@ -1,0 +1,12 @@
+.cabecalhoPrincipal .container {
+    /* faz com que o container se comporte como um exbox, ou seja, ele controlará o layout de seus lhos.
+       Por padrão, os lhos terão a mesma altura e alinhados à esquerda; */
+    display: flex;
+    align-items: center; /* centraliza verticalmente os elementos lhos dentro do pai; */
+    justify-content: space-between; /* distribui entre os elementos o espaço que está sobrando. */
+}
+
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
