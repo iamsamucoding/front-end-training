@@ -7,7 +7,6 @@
     justify-content: space-between; /* distribui entre os elementos o espaço que está sobrando. */
 }
 
-
 .cabecalhoPrincipal-nav {
     display: flex;
 }
@@ -20,7 +19,6 @@
     justify-content: space-between;
 }
 
-
 .rodapePrincipal-patrocinadores-list {
     display: flex;
     align-items: center;
@@ -28,7 +26,6 @@
     width: 70%;
     margin-right: 5%;
 }
-
 
 .rodapePrincipal-contatoForm {
     width: 25%;
@@ -43,4 +40,38 @@
     flex-direction: column; /* changes the (default) direction (row) to column */
     flex-wrap: wrap; /* if the flex elements "break" the height/size, it goes to next column */
     /*flex-flow: column wrap;*/ /* this options is the short-version of the two lines above */
+}
+
+
+/*************** COURSE GRID ***************/
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estamos quase lá! Falta inserir um espaçamento entre os elementos!
+   No layout original temos quatro elementos por linha, ou seja, o espaçamento total deles
+   deve ser dividido em quatro itens, 100% : 4 = 25%.
+   Porém, essa conta possui como resultado um espaço totalmente preenchido, assim,
+   vamos deixar um respiro acrescentando width: 23%: */
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin-bottom: 1%;
+}
+
+/* Tira as margens da direita da quarta coluna de elementos dos cursos, ou sejam
+   estamos lidando com objetos nas posições 4, 8, 12 e 16, ou seja, itens que são múltiplos de 4.
+*/
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+/* Falta retirar ainda a margem esquerda dos elementos da primeira coluna.
+   Estes objetos estão na sequência dos objetos múltiplos de 4, isto é, depois do quarto vem o quinto,
+   depois do oitavo vem o nono, depois do décimo segundo o décimo terceiro e assim por diante.
+   Portanto, tais objetos equivalem a 4+1, então, vamos escrever nth-child(4n+1) e
+   colocar também a margin-left: 0: */
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    margin-left: 0;
 }
