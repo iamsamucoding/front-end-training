@@ -1,3 +1,4 @@
+/*************** HEADER ***************/
 .cabecalhoPrincipal .container {
     /* faz com que o container se comporte como um exbox, ou seja, ele controlará o layout de seus lhos.
        Por padrão, os lhos terão a mesma altura e alinhados à esquerda; */
@@ -13,9 +14,7 @@
 
 
 
-
 /*************** FOOTER ***************/
-
 .rodapePrincipal-patrocinadores .container {
     display: flex;
     justify-content: space-between;
@@ -33,4 +32,15 @@
 
 .rodapePrincipal-contatoForm {
     width: 25%;
+}
+
+
+
+/*************** COURSE MAP ***************/
+.rodapePrincipal-navMap-list {
+    display: flex;
+    height: 250px; /* we fixed a height for this section */
+    flex-direction: column; /* changes the (default) direction (row) to column */
+    flex-wrap: wrap; /* if the flex elements "break" the height/size, it goes to next column */
+    /*flex-flow: column wrap;*/ /* this options is the short-version of the two lines above */
 }

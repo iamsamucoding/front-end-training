@@ -18,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-777">
+            <state relative-caret-position="-1490">
               <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/flexbox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="652">
+              <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -108,12 +108,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556918476808</updated>
       <workItem from="1556918478906" duration="905000" />
-      <workItem from="1556919509593" duration="446000" />
+      <workItem from="1556919509593" duration="1320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1351000" />
+    <option name="totallyTimeSpent" value="2225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -144,15 +144,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-777">
+        <state relative-caret-position="-1490">
           <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/flexbox.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="652">
+          <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
         </state>
       </provider>
     </entry>
