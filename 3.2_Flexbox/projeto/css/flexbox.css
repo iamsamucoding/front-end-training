@@ -47,7 +47,8 @@
 .conteudoPrincipal-cursos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* The justify-content is not viable for grids. We have to control the margins between the elements. */
+    /*justify-content: space-between;*/
 }
 
 /* Estamos quase lá! Falta inserir um espaçamento entre os elementos!
