@@ -87,8 +87,9 @@
 
 .videoSobre-video {
     /*
-     * Since the sum of all `flex-grow` from the elements/items inside the flex-container is 3,
-     * the video `<iframe class=".videoSobre-video">` will grow 1/3 of the remaining/available spaces of the
+     * Since the sum of all `flex-grow` from all elements/items inside the flex-container is 3
+     * (we have one element with 1 and one element with 2).
+     * The video `<iframe class=".videoSobre-video">` will grow 1/3 of the remaining/available spaces of the
      * flex-container.
      */
     flex-grow: 1;
@@ -191,7 +192,7 @@
         /* This property centralizes the elements correctly.
          * But, it changes the size of the button (it gets smaller).
          * We want that the button has the width of the flex-container, so we don't this property.
-         * We use `magin: 0 auto;` in the .videoSobre-video 
+         * We use `magin: 0 auto;` in the .videoSobre-video
          */
         /*align-items: center*/
     }
