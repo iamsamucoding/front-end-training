@@ -1,6 +1,6 @@
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
-botaoAdicionar.addEventListener("click", function(event){
+botaoAdicionar.addEventListener("click", function(){
     event.preventDefault(); // previna/ignore o comportamento padrão do evento
                             // no caso, o comportamento do evento de click em um botão
 
@@ -25,9 +25,7 @@ botaoAdicionar.addEventListener("click", function(event){
     form.reset();
 
     // Com a propriedade innerHTML, podemos editar obter o conteúdo HTML (HTML interno) de um elemento.
-    // limpa as mensagens de erro
-    var mensagensErro = document.querySelector("#mensagens-erro");
-    mensagensErro.innerHTML = "";
+    ul.innerHTML = ""; // limpa as mensagens de erro
 });
 
 
