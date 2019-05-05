@@ -14,7 +14,7 @@ campoFiltro.addEventListener("input", function(){
     // digitado no <input> como parte/substring);
     // O segundo campo "i" indica "case insensitive".
     var expressao = new RegExp(this.value, "i");
-    
+
 
     // se tem algum nome digitado, mostra apenas os nomes que começam com o que foi escrito, apagando o resto.
     // Pra isso, adicionamos e removemos a classe ".invisivel" das linhas da tabela.
