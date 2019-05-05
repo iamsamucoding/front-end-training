@@ -76,3 +76,127 @@
 .conteudoPrincipal-cursos-link:nth-child(4n+1) {
     margin-left: 0;
 }
+
+
+
+/*************** VIDEO SECTION ***************/
+.videoSobre .container {
+    display: flex;
+}
+
+
+.videoSobre-video {
+    /*
+     * Since the sum of all `flex-grow` from the elements/items inside the flex-container is 3,
+     * the video `<iframe class=".videoSobre-video">` will grow 1/3 of the remaining/available spaces of the
+     * flex-container.
+     */
+    flex-grow: 1;
+
+    /*
+     * By decreasing the screen size, we want that the video iframe shrinks twice as much as the other elements
+     * inside the flex-content.
+     */
+    flex-shrink: 2;
+}
+
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /* Since the sum of all `flex-grow` from the elements/items inside the flex-container is 3,
+       the list`<ul class=".videoSobre-sobre">` will grow 2/3 of the remaining/available spaces of the
+       flex-container.
+     */
+    flex-grow: 2;
+}
+
+
+.videoSobre-sobre-list {
+    /*
+     This property grows the element with 1 piece/part of the remaining spaces inside the flex-container.
+     If this item is the only with the `flex-grow` property, this part is the entire remaining space.
+
+     For this specific case, we have a button below the <ul class=".videoSobre-sobre-list"> and a title `<h2>` above.
+     We want that this buttom goes to the end of the flex-container, without changing in the position of the <ul> and the title.
+
+     If we use `justify-content` in the parent flex-content, we put a space for all elements of the container,
+     `<h2>`, `<ul>`, and `<button>`.
+     But we don't wanna do that. We want that only the buttom goes to the end of the flex-container.
+     Then, we grows the size of the list with 1 part of the remaining space of the flex-container.
+     Since only this element set the flex-grow, this 1 part is the all the space.
+
+     Note that the flex-container is the `<div class=".videoSobre-sobre">` set the direction to column.
+     */
+    flex-grow: 1;
+}
+
+
+
+
+
+
+/*************** MOBILE ***************/
+@media(max-width: 768px) {
+    /*
+     Every flexbox has a "main-axis" and a "cross-axis".
+     By default, the flex-direction is row, then its "main-axis" is horizontal and its "cross-axis" is vertical.
+
+     The property `justify-content` refers to the 'main-axis'.
+     The property `align-items` refers to the 'cross-axis'.
+
+     When we change the flex-direction to column, these axes also change.
+     Thus, the "main-axis" becomes the vertical one, and the "cross-axis" the horizontal one.
+     */
+    .cabecalhoPrincipal .container {
+        display: flex;
+        flex-direction: column;
+
+        /*
+         This class has already aligned the elements (cross-axis) to the center (see the begin of this file).
+         The, the elements now centered according to the horizontal axis:     AAA
+                                                                              BBB
+         We want that the lines of the menu itens covers all the menu container.
+         Then, we have to change the behavious of `align-items` here (for the mobile case).
+         For this, we use the value `initial`.
+         */
+        align-items: initial;
+        /* Finally, we align the text of the menu items to "centralize" the menu itens, but now with their
+           border covering all menu container.
+         */
+        text-align: center;
+    }
+
+    .cabecalhoPrincipal-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* changes the order of a menu item */
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+    }
+
+
+
+    /*
+     * We want that the elements inside the flex-container are centralized in a columns.
+     * We then change the direction of the container and change the margin of the video iframe.
+     * We do that because we want that the button has the width of the flex-container.
+    */
+    .videoSobre .container {
+        flex-direction: column;
+
+        /* This property centralizes the elements correctly.
+         * But, it changes the size of the button (it gets smaller).
+         * We want that the button has the width of the flex-container, so we don't this property.
+         * We use `magin: 0 auto;` in the .videoSobre-video 
+         */
+        /*align-items: center*/
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
+    }
+}
