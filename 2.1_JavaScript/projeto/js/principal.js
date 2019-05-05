@@ -4,46 +4,50 @@ var titulo = document.querySelector(".titulo"); // gets the first element with t
 titulo.textContent = "Aparecida: A mulher da Nutrição"; // it changes the text of the first tag with with class "titulo"
 
 
+var pacientes = document.querySelectorAll(".paciente");
 
-var primeiroPaciente = document.querySelector("#primeiro-paciente");
+for (var i = 0; i < pacientes.length; i++) {
+    var paciente = pacientes[i];
 
-var tdPeso = primeiroPaciente.querySelector(".info-peso");
-var tdAltura = primeiroPaciente.querySelector(".info-altura");
-var tdImc = primeiroPaciente.querySelector(".info-imc");
+    var tdPeso = paciente.querySelector(".info-peso");
+    var tdAltura = paciente.querySelector(".info-altura");
+    var tdImc = paciente.querySelector(".info-imc");
 
-var peso = tdPeso.textContent;
-var altura = tdAltura.textContent;
+    var peso = tdPeso.textContent;
+    var altura = tdAltura.textContent;
 
-var pesoEhValido = true;
-var alturaEhValida = true;
+    var pesoEhValido = true;
+    var alturaEhValida = true;
 
 
-if (peso <= 0 || peso >= 1000) {
-    console.log("Peso inválido");
-    pesoEhValido = false;
-    tdImc.textContent = "Peso inválido!";
+    if (peso <= 0 || peso >= 1000) {
+        console.log("Peso inválido");
+        pesoEhValido = false;
+        tdImc.textContent = "Peso inválido!";
+
+        // muda o estilo desse DOM elemento especifício
+        // note que properties com mais de uma palavra (background-color) são usadas como camelCase.
+        /* paciente.style.backgroundColor = "lightcoral"; */
+
+        // Adiciona a classe CSS ".paciente-invalido" ao elemento.
+        // Note que o resultado é o mesmo do paciente.style.backgroundColor, no caso, mas com isso conseguimos
+        // reaproveitar códigos/estilos/
+        // O método `classList` retorna a lista de classes CSS do elemento.
+        paciente.classList.add("paciente-invalido");
+    }
+
+    if (altura <= 0 || altura >= 3.00) {
+        console.log("Altura inválida");
+        alturaEhValida = false;
+        tdImc.textContent = "Altura inválida!";
+        paciente.style.backgroundColor = "lightcoral";
+    }
+
+
+    if (alturaEhValida && pesoEhValido) {
+        var imc = peso / (altura * altura);
+        // muda o conteúdo da célula do IMC com o valor calculado, com 2 casas decimais
+        tdImc.textContent = imc.toFixed(2);
+    }
 }
-
-if (altura <= 0 || altura >= 3.00) {
-    console.log("Altura inválida");
-    alturaEhValida = false;
-    tdImc.textContent = "Altura inválida!";
-}
-
-
-if (alturaEhValida && pesoEhValido) {
-    var imc = peso / (altura * altura);
-    tdImc.textContent = imc; // muda o conteúdo da célula do IMC com o valor calculado
-}
-
-
-
-
-
-// console.log(primeiroPaciente); // tr
-// console.log(tdPeso); // td com o peso
-// console.log(peso); // returns 100
-//
-// console.log(tdAltura); // td com a altura
-// console.log(altura); // returns 2.0
 
