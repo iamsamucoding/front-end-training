@@ -11,42 +11,12 @@ botaoAdicionar.addEventListener("click", function(){
     // Cria a tr e a td do paciente
     var pacienteTr = montaTr(paciente);
 
-    var erros = validaPacientes(paciente); // [] ou uma lista/array de erros
-
-    if (erros.length > 0) { // se tem ao menos uma mensagem de erro
-        exibeMensagensDeErro(erros);
-        return;
-    }
-
     var tabela = document.querySelector("#tabela-pacientes");
     tabela.appendChild(pacienteTr);
 
     // limpa o formulario após a submissão
     form.reset();
-
-    // Com a propriedade innerHTML, podemos editar obter o conteúdo HTML (HTML interno) de um elemento.
-    ul.innerHTML = ""; // limpa as mensagens de erro
 });
-
-
-function exibeMensagensDeErro(erros){
-    var ul = document.querySelector("#mensagens-erro");
-    ul.innerHTML = ""; // limpa as mensagens de erro
-
-    // Uma opcão de for
-    // for(var i = 0; i < erros.length ; i++){
-    //     var erro = erros[i];
-    // ...
-    // }
-
-    // pra cada elemento do array, execute uma função pra ele
-    // o item da iteração é passado por parâmetro na função
-    erros.forEach(function(erro) {
-        var li = document.createElement("li");
-        li.textContent = erro;
-        ul.appendChild(li);
-    });
-}
 
 
 
@@ -87,45 +57,3 @@ function montaTd(dado, classe){
 
     return td;
 }
-
-
-function validaPeso(peso){
-    return (peso >= 0 && peso <= 1000);
-}
-
-function validaAltura(altura) {
-    return (altura >= 0 && altura <= 3.0);
-}
-
-// retorna uma lista com mensagens de erros
-function validaPacientes(paciente){
-    var erros = [];
-
-    if (paciente.nome.length == 0){
-        erros.push("O nome não pode ser em branco");
-    }
-
-    if (paciente.gordura.length == 0){
-        erros.push("A gordura não pode ser em branco");
-    }
-
-    if (paciente.peso.length == 0){
-        erros.push("O peso não pode ser em branco");
-    }
-
-    if (paciente.altura.length == 0){
-        erros.push("A altura não pode ser em branco");
-    }
-
-    if (!validaPeso(paciente.peso)){
-        erros.push("Peso é inválido");
-    }
-
-    if (!validaAltura(paciente.altura)){
-        erros.push("Altura é inválida");
-    }
-
-    return erros;
-}
-
-

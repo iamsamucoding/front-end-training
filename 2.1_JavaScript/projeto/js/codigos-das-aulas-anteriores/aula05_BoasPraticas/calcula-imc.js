@@ -11,18 +11,29 @@ for (var i = 0; i < pacientes.length; i++) {
     var peso = tdPeso.textContent;
     var altura = tdAltura.textContent;
 
-    var pesoEhValido = validaPeso(peso);
-    var alturaEhValida = validaAltura(altura);
+    var pesoEhValido = true;
+    var alturaEhValida = true;
 
 
-    if (!pesoEhValido) {
+    if (peso <= 0 || peso >= 1000) {
         console.log("Peso inválido");
+        pesoEhValido = false;
         tdImc.textContent = "Peso inválido!";
+
+        // muda o estilo desse DOM elemento especifício
+        // note que properties com mais de uma palavra (background-color) são usadas como camelCase.
+        /* paciente.style.backgroundColor = "lightcoral"; */
+
+        // Adiciona a classe CSS ".paciente-invalido" ao elemento.
+        // Note que o resultado é o mesmo do paciente.style.backgroundColor, no caso, mas com isso conseguimos
+        // reaproveitar códigos/estilos/
+        // O método `classList` retorna a lista de classes CSS do elemento.
         paciente.classList.add("paciente-invalido");
     }
 
-    if (!alturaEhValida) {
+    if (altura <= 0 || altura >= 3.00) {
         console.log("Altura inválida");
+        alturaEhValida = false;
         tdImc.textContent = "Altura inválida!";
         paciente.classList.add("paciente-invalido");
     }
