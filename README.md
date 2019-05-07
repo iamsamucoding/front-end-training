@@ -6,5 +6,5 @@ Each folder refers to a course of the training. In general, the folder has a *ba
 
 The codes are in Portuguese PT-BR (variable and function names, etc) since the original training is in PT-BR. They are over-commented since I intend to use them as references guides when needed.
 
-All projects were developed in WebStrom IDE.
+All projects were developed in WebStorm IDE.
 
