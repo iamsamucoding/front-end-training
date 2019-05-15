@@ -1,6 +1,6 @@
-class NegociacoesView {
+class NegociacoesView extends View {
     constructor(elemento) {
-        this._elemento = elemento;
+        super(elemento);
     }
 
 
@@ -29,7 +29,7 @@ class NegociacoesView {
     // Since we have a single instruction in this arrow function, we can remove the { }
     // Since this single instruction is a return instruction, we can remove the keyword `return`
     //
-    _template(model) {
+    template(model) {
         return `
             <table class="table table-hover table-bordered">
                 <thead>
@@ -76,10 +76,4 @@ class NegociacoesView {
     //
     // Note that we used arrow function without return inside it, because it has a single instruction.
 
-
-
-
-    update(model) {
-        this._elemento.innerHTML = this._template(model);
-    }
 }
