@@ -110,6 +110,7 @@ class TabelaAutores extends Component {
                                 // we added a primary key for each element in order to
                                 // speed up the data value checking after calling setState()
                                 // for re-rendering the HTML component.
+                                // Otherwise, we would have the warning: Each child in a list should have a unique "key" prop.
                                 <tr key={autor.id}>
                                     <td>{autor.nome}</td>
                                     <td>{autor.email}</td>
