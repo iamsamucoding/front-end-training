@@ -7,7 +7,7 @@ import PubSub from 'pubsub-js';
 import axios from "axios";
 
 
-export class FormularioAutor extends Component{
+class FormularioAutor extends Component{
     constructor() {
         super();
         this.state = {lista : [], nome:'',email:'', senha:''};
@@ -92,7 +92,7 @@ export class FormularioAutor extends Component{
 
 
 
-export class TabelaAutores extends Component {
+class TabelaAutores extends Component {
     render() {
         return (
             <div>
@@ -195,8 +195,13 @@ export default class AutorBox extends Component {
     render() {
         return (
             <div>
-                <FormularioAutor callbackAtualizaListagem={this.atualizaListagem}/>
-                <TabelaAutores lista={this.state.lista}/>
+                <div className="header">
+                    <h1>Bem-vindo</h1>
+                </div>
+                <div className="content" id="content">
+                    <FormularioAutor callbackAtualizaListagem={this.atualizaListagem}/>
+                    <TabelaAutores lista={this.state.lista}/>
+                </div>
             </div>
         );
     }
