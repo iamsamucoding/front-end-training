@@ -7,7 +7,7 @@ import PubSub from 'pubsub-js';
 import axios from "axios";
 
 
-class FormularioAutor extends Component{
+class FormularioAutor extends Component {
     constructor() {
         super();
         this.state = {lista : [], nome:'',email:'', senha:''};

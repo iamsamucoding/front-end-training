@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Home from './Home';
-import AutorBox from './Autor';
-
 import './css/pure-min.css';
 import './css/side-menu.css';
 
@@ -18,8 +15,7 @@ class App extends React.Component {
 
                 <div id="menu">
                     <div className="pure-menu">
-                        <a className="pure-menu-heading" href="#">Company</a>
-
+                        <Link to={"/"} className="pure-menu-heading" href="#">Company</Link>
                         <ul className="pure-menu-list">
                             {/* Utilizamos um <Link> porque já queremos gerar um <a> com o evento associado ao router.
                                 Quando clicamos nele, não queremos que seja feita uma nova requisição, queremos apenas

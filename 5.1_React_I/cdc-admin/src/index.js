@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
-import {BrowserRouter as Router, Route,Switch,Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './index.css';
 
 import App from './App';
 import Home from './Home';
 import AutorBox from "./Autor";
+import LivroBox from "./Livro";
 
 
 // With React Router v4, one of the big changes is that there are a number of different router components.
@@ -50,7 +51,7 @@ ReactDOM.render(
                 */}
                 <Route exact path="/" component={Home} />
                 <Route path="/autor" component={AutorBox} />
-                <Route path="/livro" />
+                <Route path="/livro" component={LivroBox} />
             </Switch>
         </App>
     </Router>,
