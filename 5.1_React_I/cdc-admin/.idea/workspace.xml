@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be8662d-0cb4-4d63-8fea-9538d0937a42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Livro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../4.1_JavaScript_AvancadoI/aluraframe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../4.1_JavaScript_AvancadoI/aluraframe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
@@ -147,12 +148,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558981510894</updated>
       <workItem from="1558981512094" duration="24715000" />
-      <workItem from="1559044033416" duration="491000" />
+      <workItem from="1559044033416" duration="670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25206000" />
+    <option name="totallyTimeSpent" value="25385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
