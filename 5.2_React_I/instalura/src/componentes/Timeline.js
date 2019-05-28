@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FotoItem from './FotoItem';
+import FotoItem from './Foto';
 
 
 export default class Timeline extends Component {
@@ -9,8 +9,17 @@ export default class Timeline extends Component {
     }
 
     componentDidMount(){
-        console.log("aaa aa");
-        fetch('https://instalura-api.herokuapp.com/api/public/fotos/rafael')
+        // the server provide an API whose url accepts a token for a valid user.
+        // The token comes after X-AUTH-TOKEN=
+        // When a user logs into the page (being authenticate in the server by another API), the
+        // server provides a valid token with all information that it needs.
+        // Then, we can use this API to get the photos for the logged user.
+        //
+        // Using token is a way to communicate two different systems (or, similarly, an app/web that consumes a service).
+        let url = `https://instalura-api.herokuapp.com/api/fotos/?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`;
+        console.log(url);
+
+        fetch(url)
             .then(response => response.json())
             .then(fotos => {
                 this.setState({fotos: fotos});
