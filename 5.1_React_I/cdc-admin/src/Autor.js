@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InputCustomizado from './componentes/InputCustomizado';
 import BotaoSubmitCustomizado from "./componentes/BotaoSubmitCustomizado";
+import TratadorErros from './TratadorErros';
 
 import PubSub from 'pubsub-js';
 import axios from "axios";
@@ -40,15 +41,27 @@ export class FormularioAutor extends Component{
         let user  = {nome: this.state.nome, email: this.state.email, senha: this.state.senha};
         console.log(user);
 
+        // Configure um Axios Interceptor que faz algo antes que um request seja enviado
+        axios.interceptors.request.use(config => {
+            console.log(config);
+            PubSub.publish("limpa-erros",{}); // limpa mensagens de erros dos campos
+            return config; // obrigatorio retornar as config do request que será disparado
+        });
+
+        // uma vez que estamos usando arrow functions, o this mantém o contexto, ou seja, ele sempre será referente
+        // a FormularioAutor, independente de onde é chamado
         axios.post("http://cdc-react.herokuapp.com/api/autores", user)
             .then(response => {
                 // publica/dispara mensagem no tópico/canal 'atualiza-lista-autores' que temos uma nova listagem disponível
                 let novaListagem = response.data;
                 PubSub.publish('atualiza-lista-autores', novaListagem);
+                this.setState({nome:'', email:'', senha:''}); // limpa o formulario
             })
             .catch(error => {
-                alert("Erro ao Cadastrar Usuario");
-                console.log(error);
+                let response = error.response;
+                if (response.status === 400){
+                    new TratadorErros().publicaErros(response.data.errors);
+                }
             });
     }
 
@@ -156,10 +169,13 @@ export default class AutorBox extends Component {
         // Me inscreva no tópico/canal 'atualiza-lista-autores' de modo que, quando tiver uma atualização neste topico
         // com uma nova listagem, eu chame uma function que têm 2 parâmetros: o tópico e o objeto atualizado no tópico
         //
-        // Note que colocamos o .bind(this) no final da function.
-        // Isso é necessário pra forçar que o `this` usado dentro da function sempre sempre referente a um AutorBox,
-        // independente da onde ele é chamado.
-        PubSub.subscribe('atualiza-lista-autores', function(topico, novaLista) {
+        // Note que usamos o `this` dentro da function e queremos que ele seja sempre referente a um `AutorBox`,
+        // independente de onde ele é chamado.
+        // Se a function fosse uma função anônima ou um método da classe, teríamos que usar o .bind(this)
+        // para forçar esse `this`.
+        // Mas, como estamos usando uma arrow function, isto não é preciso pq ela sempre será chamada com o contexto
+        // em que ela foi definida. No caso, AutorBox.
+        PubSub.subscribe('atualiza-lista-autores', (topico, novaLista) => {
             // mostre-me apenas os 10 últimos registros.
             // Fiz isso pq a API da Alura estava com muitos registros e a página ficava lenta pra exibir tudo
             // isso na tela
@@ -167,7 +183,7 @@ export default class AutorBox extends Component {
             let novaSublista = novaLista.slice(beginSlice);
 
             this.setState({lista: novaSublista});
-        }.bind(this));
+        });
     }
 
 
