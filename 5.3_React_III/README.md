@@ -10,6 +10,7 @@ npm install create-react-app
 - npm install --save pubsub-js
 - npm install --save react-transition-group@1.x
 - npm install --save redux
+- npm install --save redux-thunk
 
 
 # Learning React Route v4
