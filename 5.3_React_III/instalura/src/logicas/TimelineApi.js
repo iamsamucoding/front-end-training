@@ -1,4 +1,5 @@
-import Pubsub from "pubsub-js";
+import {listagem, like} from '../actions/actionCreator';
+
 
 
 // Como essa classe só tem métodos estáticos e não tem atributos, ela poderia tranquilamente virar um arquivo com
@@ -58,8 +59,11 @@ export default class TimelineApi {
                     //
                     // Nosso caso, nosso payload é uma propriedade chamada fotos (que será acessível pela store) que tem os valores
                     // de listaFixa
-                    dispatch({type:'LISTAGEM', fotos}); // lembre-se que estamos usando shorthand operator, logo
-                                                        // fotos === fotos: fotos
+                    // dispatch({type:'LISTAGEM', fotos}); // lembre-se que estamos usando shorthand operator, logo
+                    //                                     // fotos === fotos: fotos
+
+                    // usamos um action creator pra isso
+                    dispatch(listagem(fotos));
                     return fotos;
                 });
         }
@@ -87,7 +91,7 @@ export default class TimelineApi {
                     }
                 })
                 .then(liker => {
-                    dispatch({type:'LIKE', fotoId, liker});
+                    dispatch(like(fotoId,liker));
                     return liker;
                 })
                 .catch(error => {
