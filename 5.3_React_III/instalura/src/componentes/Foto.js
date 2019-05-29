@@ -58,7 +58,7 @@ class FotoInfo extends Component {
                             if (liker !== undefined) {
                                 // creating a unique key for the element to avoid:
                                 // Warning: Each child in a list should have a unique "key" prop.
-                                return(<Link key={liker.login} href={`/timeline/${liker.login}`} >{liker.login},</Link>)
+                                return(<Link to={"#"} key={liker.login} href={`/timeline/${liker.login}`} >{liker.login},</Link>)
                             }
                             else return null;
                         })

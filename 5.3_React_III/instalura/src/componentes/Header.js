@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-
-import Pubsub from "pubsub-js";
-
+import TimelineApi from '../logicas/TimelineApi';
 
 export default class Header extends Component {
+    constructor() {
+        super();
+        this.state = {msg: ""};
+    }
+
+    componentDidMount(){
+        this.props.store.subscribe(() => {
+            this.setState({msg:this.props.store.getState().notificacao});
+        })
+    }
+
+
     pesquisa(event){
         event.preventDefault();
-        fetch(`https://instalura-api.herokuapp.com/api/public/fotos/${this.loginPesquisado.value}`)
-            .then(response => response.json())
-            .then(fotos => {
-                console.log("pesquisa: ", fotos);
-                Pubsub.publish('timeline', fotos);
-            });
+        this.props.store.dispatch(TimelineApi.pesquisa(this.loginPesquisado.value));
     }
 
 
@@ -31,6 +36,7 @@ export default class Header extends Component {
 
                 <nav>
                     <ul className="header-nav">
+                        <span>{this.state.msg}</span>
                         <li className="header-nav-item">
                             <Link to={"/"} />
                         </li>

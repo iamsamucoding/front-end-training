@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import {timeline} from "./reducers/timeline";
+import {timeline} from './reducers/timeline';
+import {notificacao} from './reducers/header';
 
 
 import Header from './componentes/Header';
 import Timeline from './componentes/Timeline';
 
 
+
+// o jeito do React de combinar reducer é usando essa função
+const reducers = combineReducers({timeline, notificacao});
 
 
 // O Redux trabalha apenas com uma Store.
@@ -18,7 +22,7 @@ import Timeline from './componentes/Timeline';
 //
 // Quando criamos uma store, passamos a função que será chamada pela Dispatcher do Redux sempre que a
 // action for disparada.
-const store = createStore(timeline, applyMiddleware(thunkMiddleware));
+const store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 
 class App extends Component {
@@ -28,7 +32,7 @@ class App extends Component {
         return (
             <div id="root">
                 <div className="main">
-                    <Header/>
+                    <Header store={store}/>
                     <Timeline login={this.props.match.params.login} store={store}/>
                 </div>
             </div>

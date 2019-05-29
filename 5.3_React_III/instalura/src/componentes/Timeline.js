@@ -23,7 +23,8 @@ export default class Timeline extends Component {
         // e depois, executaremos o método getState() que retornará o último valor retornado pela função
         // redutora (na timeline() do App.js).
         this.props.store.subscribe(() => {
-            let fotos = this.props.store.getState();
+            // os dados retornados por cada reducer ficará gravado no estado do store com o nome do reducer
+            let fotos = this.props.store.getState().timeline;
             this.setState({fotos}); // lembre-se: {fotos} === {fotos: fotos}
         })
     }

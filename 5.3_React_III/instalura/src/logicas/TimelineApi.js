@@ -1,5 +1,4 @@
-import {listagem, like} from '../actions/actionCreator';
-
+import {listagem, like, notifica} from '../actions/actionCreator';
 
 
 // Como essa classe só tem métodos estáticos e não tem atributos, ela poderia tranquilamente virar um arquivo com
@@ -98,5 +97,23 @@ export default class TimelineApi {
                     console.log(error);
                 });
         }
+    }
+
+
+    static pesquisa(login) {
+        return dispatch => {
+            fetch(`https://instalura-api.herokuapp.com/api/public/fotos/${login}`)
+                .then(response => response.json())
+                .then(fotos => {
+                    if(fotos.legth === 0){
+                        dispatch(notifica('usuário não encontrado'));
+                    } else {
+                        dispatch(notifica('usuario encontrado'));
+                    }
+
+                    dispatch(listagem(fotos));
+                    return fotos;
+                });
+        };
     }
 }
