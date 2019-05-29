@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../../../5.1_React_I/cdc-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5.1_React_I/cdc-admin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../instalura/src/componentes/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../instalura/src/componentes/Logout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../instalura/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../instalura/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project01/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -138,11 +139,12 @@
       <workItem from="1559113223964" duration="2147000" />
       <workItem from="1559115885956" duration="999000" />
       <workItem from="1559119305848" duration="710000" />
+      <workItem from="1559120176524" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3856000" />
+    <option name="totallyTimeSpent" value="3879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/learning-react-router-v4.iml" filepath="$PROJECT_DIR$/.idea/learning-react-router-v4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/project04.iml" filepath="$PROJECT_DIR$/.idea/project04.iml" />
     </modules>
   </component>
 </project>

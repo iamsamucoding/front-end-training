@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect, matchPath} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 import App from './App';
@@ -10,6 +10,10 @@ import Logout from './componentes/Logout';
 import './css/login.css';
 import "./css/reset.css";
 import "./css/timeline.css";
+
+// https://cursos.alura.com.br/forum/topico-liberando-o-acesso-para-timeline-publica-com-route-v4-53798
+// https://tylermcginnis.com/react-router-protected-routes-authentication/
+// https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-21c99a878bf8/
 
 
 // A simple SecretRoute component adapted from https://auth0.com/blog/react-router-4-practical-tutorial/ to our project,
@@ -35,7 +39,8 @@ ReactDOM.render(
         <div>
             <Switch>
                 <Route exact path="/" component={Login}/>
-                <SecretRoute path="/timeline" component={App}/>
+                <SecretRoute exact path="/timeline" component={App}/>
+                <Route path="/timeline/:login" component={App}/>
                 <Route path="/logout" component={Logout}/>
             </Switch>
         </div>

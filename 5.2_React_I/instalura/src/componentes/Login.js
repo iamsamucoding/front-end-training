@@ -48,6 +48,7 @@ export default class Login extends Component {
             // The returned token follows the specification JSON Web Tokens (WT).
             // It is a big string and is a cryptographic JSON.
             .then(token => {
+                console.log("oioioioi");
                 // localStorage property allows you to access a session Storage object for the current origin
                 // with no expiration time.
                 // The only difference with sessionStorage is that data stored in sessionStorage gets
