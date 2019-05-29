@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {createStore} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 
 import {timeline} from "./reducers/timeline";
 
@@ -17,7 +18,7 @@ import Timeline from './componentes/Timeline';
 //
 // Quando criamos uma store, passamos a função que será chamada pela Dispatcher do Redux sempre que a
 // action for disparada.
-const store = createStore(timeline);
+const store = createStore(timeline, applyMiddleware(thunkMiddleware));
 
 
 class App extends Component {

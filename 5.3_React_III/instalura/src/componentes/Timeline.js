@@ -45,14 +45,30 @@ export default class Timeline extends Component {
         }
 
 
-        TimelineApi.lista(urlPerfil, this.props.store);
+        // Se mantivermos o jeito de dispachar as callbacks para usar o store do Redux,
+        // todo método executado precisará receber a Redux store como argumento.
+        // TimelineApi.lista(urlPerfil, this.props.store);
+
+        // Para resolver tal problema, foi criado o projeto Redux Thunk.
+        // Ele nos permite que, em vez de recebermos a store como argumento, seja possível adicionar store.dispatch
+        // na Timeline.js, mas não despacharemos uma action normal (com type e payload).
+        // Nós vamos despachar uma função que pode retornar uma promise (no caso), logo o Redux Thunk vai conseguir
+        // lidar com isso dentro do Redux.
+        // Ele receberá a execução como argumento, fará a execução assíncrona da função, e executará o dispatcher
+        // no momento oportuno.
+        //
+        // Agora não precisaríamos mais chamar a função lista() diretamente. Porém, se estamos chamando o método dispatch(),
+        // significa que queremos executar o método lista() dentro do fluxo de trabalho do Redux.
+        // Não queremos que a lista já seja executada. Então, o nosso próximo passo será adicionar um novo retorno no
+        // método lista(), que receberá a função dispatch da store do Redux.
+        this.props.store.dispatch(TimelineApi.lista(urlPerfil));
     }
 
 
     // this function is delegated to make a like.
     // it will be passed for the <FotoItem /> during rendering of Timeline
     like(fotoId){
-        this.props.store.like(fotoId);
+        this.props.store.dispatch(TimelineApi.like(fotoId));
     }
 
 

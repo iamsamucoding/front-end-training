@@ -16,6 +16,28 @@ export function timeline(state=[], action){
     if (action.type === 'LISTAGEM'){
         return action.fotos;
     }
+
+    else if (action.type === 'LIKE') {
+        console.log("action: ", action);
+        const fotoAchada = this.fotos.find(foto => foto.id === action.fotoId);
+        fotoAchada.likeada = !fotoAchada.likeada;
+
+        const liker = action.liker;
+
+        // gambiara: por algum motivo, uma lista [] está entrando no find, de modo que o liker dentro é undefined
+        const possivelLiker = [];
+        if (fotoAchada.likers !== undefined) {
+            fotoAchada.likers.find(likerAtual => likerAtual.login === liker.login);
+        }
+
+        if(possivelLiker === undefined){
+            fotoAchada.likers.push(liker);
+        } else {
+            const novosLikers = fotoAchada.likers.filter(likerAtual => likerAtual.login !== liker.logo);
+            fotoAchada.likers = novosLikers;
+        }
+    }
+
     return state;
 }
 
