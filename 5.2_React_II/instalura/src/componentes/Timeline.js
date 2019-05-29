@@ -1,4 +1,10 @@
 import React, { Component, PureComponent } from 'react';
+// import { Transition } from 'react-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
+
+import Pubsub from "pubsub-js";
+
+
 import FotoItem from './Foto';
 
 
@@ -10,14 +16,14 @@ export default class Timeline extends Component {
         this.login = props.login;
     }
 
-    carregaFotos() {
-
+    componentWillMount(){
+        Pubsub.subscribe('timeline',(topico, fotos) => {
+            console.log("fotos pesquisadas: ", fotos);
+            this.setState({fotos: fotos}); // it's the same of {fotos: fotos}
+        })
     }
 
     componentDidMount(){
-        console.log("componentDidMount");
-        console.log("this.login ", this.login);
-
         // the server provide an API whose url accepts a token for a valid user.
         // The token comes after X-AUTH-TOKEN=
         // When a user logs into the page (being authenticate in the server by another API), the
@@ -44,9 +50,14 @@ export default class Timeline extends Component {
     render(){
         return (
             <div className="fotos container">
-                {
-                    this.state.fotos.map(foto => <FotoItem key={foto.id} foto={foto} />)
-                }
+                <CSSTransitionGroup
+                    transitionName="timeline"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+                    {
+                        this.state.fotos.map(foto => <FotoItem key={foto.id} foto={foto} />)
+                    }
+                </CSSTransitionGroup>
             </div>
         );
     }
