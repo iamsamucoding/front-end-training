@@ -1,19 +1,29 @@
 import Pubsub from "pubsub-js";
 
 
-export default class TimelineStore {
+export default class TimelineApi {
     // injecao de dependencia
     constructor(fotos) {
         this.fotos = fotos;
     }
 
 
-    lista(urlPerfil) {
+    // Como o método não lida com mais nenhum dado da classe, não é necessário que seja de instância,
+    // podendo ser estático (static).
+    static lista(urlPerfil, store) {
         fetch(urlPerfil)
             .then(response => response.json())
             .then(fotos => {
-                this.fotos = fotos;
-                Pubsub.publish('timeline',this.fotos);
+                // A Redux store tem o método dispatch() para "despacharmos" uma nova ação. No caso, a ação "LISTAGEM".
+                //
+                // Se a ação que vier de LISTAGEM esperamos que seja feito algo.
+                // As informações que passamos além do type (action) recebem o nome de "payload" da action.
+                // A seguir, adicionaremos a nova propriedade no dispatch():
+                //
+                // Nosso caso, nosso payload é uma propriedade chamada fotos (que será acessível pela store) que tem os valores
+                // de listaFixa
+                store.dispatch({type:'LISTAGEM', fotos}); // lembre-se que estamos usando shorthand operator, logo
+                                                          // fotos === fotos: fotos
             });
     }
 

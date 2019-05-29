@@ -3,6 +3,8 @@ import { CSSTransitionGroup } from 'react-transition-group';
 
 import FotoItem from './Foto';
 
+import TimelineApi from '../logicas/TimelineApi'
+
 
 // export default class Timeline extends PureComponent {
 export default class Timeline extends Component {
@@ -42,18 +44,8 @@ export default class Timeline extends Component {
             urlPerfil = `https://instalura-api.herokuapp.com/api/public/fotos/${this.login}`;
         }
 
-        // this.props.store.lista(urlPerfil);
-        let listaFixa = [{"urlPerfil":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/profile-photo-alberto.jpg","loginUsuario":"alots","horario":"29/05/2019 09:48","urlFoto":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/photo-1.jpg","id":1,"likeada":false,"likers":[],"comentarios":[],"comentario":"Legenda da foto"},{"urlPerfil":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/profile-photo-alberto.jpg","loginUsuario":"alots","horario":"29/05/2019 09:48","urlFoto":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/photo-2.jpg","id":2,"likeada":false,"likers":[],"comentarios":[],"comentario":"Legenda da foto"}];
 
-        // A Redux store tem o método dispatch() para "despacharmos" uma nova ação. No caso, a ação "LISTAGEM".
-        //
-        // Se a ação que vier de LISTAGEM esperamos que seja feito algo.
-        // As informações que passamos além do type (action) recebem o nome de "payload" da action.
-        // A seguir, adicionaremos a nova propriedade no dispatch():
-        //
-        // Nosso caso, nosso payload é uma propriedade chamada fotos (que será acessível pela store) que tem os valores
-        // de listaFixa
-        this.props.store.dispatch({type:'LISTAGEM', fotos: listaFixa});
+        TimelineApi.lista(urlPerfil, this.props.store);
     }
 
 
