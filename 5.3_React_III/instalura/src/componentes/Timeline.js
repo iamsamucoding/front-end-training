@@ -13,8 +13,16 @@ export default class Timeline extends Component {
     }
 
     componentWillMount(){
-        this.props.store.subscribe(fotos => {
-            this.setState({fotos});
+
+        // Você quer se inscrever na store, que agora é do Redux. Porém, não receberemos mais o array de fotos,
+        // inclusive porque o Redux não sabe que trabalharemos como array de fotos.
+        // Nós podemos deixar qualquer objeto literal dentro do Redux.
+        // Em seguida, o subscribe() não receberá parâmetros e para você recuperar o estado, acessaremos a store,
+        // e depois, executaremos o método getState() que retornará o último valor retornado pela função
+        // redutora (na timeline() do App.js).
+        this.props.store.subscribe(() => {
+            let fotos = this.props.store.getState();
+            this.setState({fotos}); // lembre-se: {fotos} === {fotos: fotos}
         })
     }
 
@@ -34,7 +42,18 @@ export default class Timeline extends Component {
             urlPerfil = `https://instalura-api.herokuapp.com/api/public/fotos/${this.login}`;
         }
 
-        this.props.store.lista(urlPerfil);
+        // this.props.store.lista(urlPerfil);
+        let listaFixa = [{"urlPerfil":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/profile-photo-alberto.jpg","loginUsuario":"alots","horario":"29/05/2019 09:48","urlFoto":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/photo-1.jpg","id":1,"likeada":false,"likers":[],"comentarios":[],"comentario":"Legenda da foto"},{"urlPerfil":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/profile-photo-alberto.jpg","loginUsuario":"alots","horario":"29/05/2019 09:48","urlFoto":"https://s3.amazonaws.com/caelum-online-public/react-native-parte-2/images/adittional-resources/photo-2.jpg","id":2,"likeada":false,"likers":[],"comentarios":[],"comentario":"Legenda da foto"}];
+
+        // A Redux store tem o método dispatch() para "despacharmos" uma nova ação. No caso, a ação "LISTAGEM".
+        //
+        // Se a ação que vier de LISTAGEM esperamos que seja feito algo.
+        // As informações que passamos além do type (action) recebem o nome de "payload" da action.
+        // A seguir, adicionaremos a nova propriedade no dispatch():
+        //
+        // Nosso caso, nosso payload é uma propriedade chamada fotos (que será acessível pela store) que tem os valores
+        // de listaFixa
+        this.props.store.dispatch({type:'LISTAGEM', fotos: listaFixa});
     }
 
 
