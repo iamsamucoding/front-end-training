@@ -7,6 +7,8 @@ npm install create-react-app
 ### 2. Dependencies
 - npm install --save react-router
 - npm install --save react-router-dom
+- npm install --save pubsub-js
+- npm install react-transition-group@1.x --save
 
 
 # Learning React Route v4
