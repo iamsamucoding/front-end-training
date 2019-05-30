@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {Provider} from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 import App from './App';
@@ -10,6 +11,32 @@ import Logout from './componentes/Logout';
 import './css/login.css';
 import "./css/reset.css";
 import "./css/timeline.css";
+
+
+
+import { createStore, applyMiddleware, combineReducers} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+
+import {timeline} from './reducers/timeline';
+import {notificacao} from './reducers/header';
+
+
+// o jeito do React de combinar reducer é usando essa função
+const reducers = combineReducers({timeline, notificacao});
+
+
+// O Redux trabalha apenas com uma Store.
+// Esse é um conceito diferente do propagado pelo Flux, que traz a ideia de múltiplas Stores.
+// O Redux trouxe a ideia de Store única, fato que não é proposto pelo Flux.
+// Eles sugerem, inclusive, várias Stores e tudo mais.
+//
+// Quando criamos uma store, passamos a função que será chamada pela Dispatcher do Redux sempre que a
+// action for disparada.
+const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
+
+
+
 
 // https://cursos.alura.com.br/forum/topico-liberando-o-acesso-para-timeline-publica-com-route-v4-53798
 // https://tylermcginnis.com/react-router-protected-routes-authentication/

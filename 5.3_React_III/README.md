@@ -5,12 +5,15 @@ npm install create-react-app
 ./node_modules/.bin/create-react-app instalura
 
 ### 2. Dependencies
-- npm install --save react-router
-- npm install --save react-router-dom
-- npm install --save pubsub-js
-- npm install --save react-transition-group@1.x
-- npm install --save redux
-- npm install --save redux-thunk
+- npm install react-router --save
+- npm install react-router-dom --save
+- npm install pubsub-js --save
+- npm install react-transition-group@1.x --save
+- npm install redux --save
+- npm install redux-thunk --save
+- npm install immutable --save
+- npm install react-redux --save
+- npm install prop-types --save
 
 
 # Learning React Route v4

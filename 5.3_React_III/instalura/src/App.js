@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+
+import Header from './componentes/Header';
+import Timeline from './componentes/Timeline';
+
 import { createStore, applyMiddleware, combineReducers} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import {timeline} from './reducers/timeline';
 import {notificacao} from './reducers/header';
-
-
-import Header from './componentes/Header';
-import Timeline from './componentes/Timeline';
-
 
 
 // o jeito do React de combinar reducer é usando essa função
@@ -39,5 +38,18 @@ class App extends Component {
         );
     }
 }
+
+
+
+// NÃO FUNCIONA
+// React disponibiliza maneiras de validar coisas nos componentes.
+// Em App.js, declararemos a propriedade contextTypes, que é citada na documentação do React.
+// Se declararmos a propriedade contextTypes, podemos dizer tudo o que esperamos existir no contexto global do
+// React para a criação do objeto.
+// Uma das propriedades esperadas é a store, também especificaremos o tipo: PropTypes.object.isRequired - esperamos
+// que ele seja obrigatório.
+// App.contextTypes = {
+//     store : React.PropTypes.object.isRequired
+// };
 
 export default App;
