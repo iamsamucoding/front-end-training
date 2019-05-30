@@ -8,3 +8,5 @@ The codes are in Portuguese PT-BR (variable and function names, etc) since the o
 
 All projects were developed in WebStorm IDE.
 
+PS: Course React 5.3_React_III is incomplete.
+
